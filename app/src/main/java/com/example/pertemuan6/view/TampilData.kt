@@ -19,7 +19,7 @@ fun TampilanData(
 ){
     val items = listOf(
         Pair(stringResource(id = R.string.nama_lengkap), second = "Contoh Nama"),
-        Pair(stringResource(id = R.string.jenis_kelamin), second = ""),
+        Pair(stringResource(id = R.string.jenis_kelamin), second = "contoh jenis kelamin"),
         Pair(stringResource(id = R.string.alamat), second = "Contoh Alamat")
 }{
     Scaffold (modifier = Modifier,
@@ -56,8 +56,11 @@ fun TampilanData(
         }   spacer(modifier = modifier.height(height=10.dp))
             button(
                 modifier = Modifier.fillMaxWidth(),
-                onClick = {onBackBtnClick}
-            )
+                onClick = onBackBtnClick
+            ) {
+                Text(text = stringResource(id = R.string.back))
+            }
+
 
 
     }
