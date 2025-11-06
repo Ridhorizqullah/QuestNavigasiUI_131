@@ -3,10 +3,13 @@ package com.example.pertemuan6.view
 import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 
 
 @composable
@@ -14,7 +17,7 @@ fun FormIsian(
     jenisK:List<string> = listOf("Laki-laki","Perempuan"),
     OnSubmitBtnClick : () -> Unit
 ){
-    scaffold (modifier=modifier,
+    Scaffold (modifier=modifier,
         topBar={
             topAppBar(
                 tittle = {Text(text= stringResource(id= R.string.home),
@@ -28,6 +31,10 @@ fun FormIsian(
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Arrangement.CenterHorizontally
         )   {
+            OutlinedTextField(
+                value = ""
+                
+            )
 
 
 
@@ -56,3 +63,5 @@ fun FormIsian(
 
 
 }
+
+
