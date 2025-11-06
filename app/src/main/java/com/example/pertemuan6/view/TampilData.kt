@@ -7,6 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.sp
 
 @Composable
 @composable
@@ -35,7 +37,17 @@ fun TampilanData(
         Column (
             modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
-        )
+        ){
+            items.forEach{ item->
+                Column {
+                    Text(text = item.first.uppercase(),
+                        fontSize = 20.sp,
+                    Text(text = item.second,
+                        fontwight = FontWeight.Bold,
+                        fontfamily = FontFamily.Cursive fontsize = 22.sp)
+                    )
+                }
+        }
 
     }
 }
