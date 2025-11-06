@@ -1,6 +1,8 @@
 package com.example.pertemuan6.view
 
 import android.R
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.res.colorResource
@@ -21,7 +23,20 @@ fun FormIsian(
                     (containerColor = colorResource(id = R.color.purple_500))
             )
         }
-    ){
+    ){  isiRuang ->
+        Column (modifier = modifier.padding(paddingvalues = isiRuang),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Arrangement.CenterHorizontally
+        )   {
+
+
+
+        }
+
+
+
+
+
         }
 
 
