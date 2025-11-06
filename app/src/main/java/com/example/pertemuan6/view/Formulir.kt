@@ -23,11 +23,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 
+annotation class composable
+
 @composable
 fun FormIsian(
-    jenisK:List<string> = listOf("Laki-laki","Perempuan"),
+    jenisK:List<R.string> = listOf("Laki-laki","Perempuan"),
     OnSubmitBtnClick : () -> Unit
 ){
+    val modifier = null
     Scaffold (modifier=modifier,
         topBar={
             topAppBar(
