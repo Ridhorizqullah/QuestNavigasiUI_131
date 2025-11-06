@@ -4,8 +4,12 @@ import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -39,13 +43,13 @@ fun FormIsian(
             horizontalAlignment = Arrangement.CenterHorizontally
         )   {
             OutlinedTextField(
-                value = ""
+                value = "",
                 singleLine = true,
                 modifier = Modifier
                     .padding(top = 10.dp)
                     .width(width= 250.dp),
-                label = {Text(text = "Nama Lengkap")}
-                onvalueChange = {},
+                label = {Text(text = "Nama Lengkap"),
+                onValueChange = {},
             )
             HorizontalDivider(modifier = modifier
                 .padding(all=20.dp)
@@ -68,16 +72,25 @@ fun FormIsian(
                 thickness = 1.dp
                 color = color.Red
             )
+            OutlinedTextField(
+                value = "",
+                singleLine = true,
+                modifier = Modifier
+                    .width(width= 250.dp),
+                label = {Text(text = "Alamat")},
+                onValueChange = {},
+            )
 
-
-
+            Spacer(modifier = Modifier.height(height = 20.dp))
+            Button(
+                Moddifier = Modifier.fillMaxWidth(fraction=1f)
+                onClick = {OnSubmitBtnClick}
+            ) {
+                Text(text = stringResource(id = R.string.submit)
+            }
 
 
         }
-
-
-
-
 
         }
 
