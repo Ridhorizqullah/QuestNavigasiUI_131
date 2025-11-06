@@ -3,6 +3,9 @@ package com.example.pertemuan6.view
 import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -33,7 +36,11 @@ fun FormIsian(
         )   {
             OutlinedTextField(
                 value = ""
-                
+                singleLine = true,
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .width(width= 250.dp),
+                label = {Text(text = "Nama Lengkap")}
             )
 
 
