@@ -45,7 +45,7 @@ fun FormIsian(
                     .padding(top = 10.dp)
                     .width(width= 250.dp),
                 label = {Text(text = "Nama Lengkap")}
-                onvaluechange
+                onvalueChange = {},
             )
             HorizontalDivider(modifier = modifier
                 .padding(all=20.dp)
@@ -62,6 +62,12 @@ fun FormIsian(
                     }
                 }
             }
+            HorizontalDivider(modifier = modifier
+                .padding(all=20.dp)
+                .width(width = 250.dp)
+                thickness = 1.dp
+                color = color.Red
+            )
 
 
 
