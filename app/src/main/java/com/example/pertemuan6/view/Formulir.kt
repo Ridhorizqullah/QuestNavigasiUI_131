@@ -3,10 +3,12 @@ package com.example.pertemuan6.view
 import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -48,7 +50,18 @@ fun FormIsian(
             HorizontalDivider(modifier = modifier
                 .padding(all=20.dp)
                 .width(width = 250.dp), thickness = Thickness, color = coloer.Red)
-
+            Row {
+                jenisK.forEach {
+                    item->
+                    Row(vertikalAlignment = Alignment.CenterVertically){
+                        RadioButton(
+                            selected = false
+                            onClick = {item}
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
 
 
 
